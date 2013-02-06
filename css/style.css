@@ -33,15 +33,15 @@ body {
   margin-bottom: 0px;
 }
 
-#status {
+.leftbox {
   padding: 10px;
 }
 
-#status h3 {
+.leftbox h3 {
   margin: 0;
 }
 
-#status ul {
+.leftbox ul {
   padding-left: 10px;
   list-style-type: none;
 }
