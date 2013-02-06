@@ -1,6 +1,12 @@
 
 body {
   font-family: 'Average Sans', sans-serif;
+  margin: 3px;
+}
+
+#leftbar {
+  float: left;
+  width: 200px;
 }
 
 #header {
@@ -9,10 +15,14 @@ body {
 }
 
 #logo {
+  margin: 0 auto;
+  display: block;
+}
+
+#title {
   font-family: 'Black Ops One', cursive;
   font-size: 4em;
   margin: 0px;
-  text-align: center;
 }
 
 #mission {
@@ -23,8 +33,14 @@ body {
   margin-bottom: 0px;
 }
 
-#wrapper {
+#status {
+  padding: 10px;
 }
+
+#status h3 {
+  margin: 0;
+}
+
 
 footer {
   text-align: center;
