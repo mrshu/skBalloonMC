@@ -9,6 +9,10 @@ body {
   width: 200px;
 }
 
+#leftbar small{
+  padding: 10px;
+}
+
 #header {
   width: 800px;
   margin: 0 auto;
