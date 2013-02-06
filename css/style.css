@@ -1,5 +1,28 @@
 
+body {
+  font-family: 'Average Sans', sans-serif;
+}
 
+#header {
+  width: 800px;
+  margin: 0 auto;
+}
+
+#logo {
+  font-family: 'Black Ops One', cursive;
+  font-size: 4em;
+  margin: 0px;
+}
+
+#mission {
+  font-family: 'Bowlby One SC', cursive;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#wrapper {
+}
 
 footer {
   text-align: center;
