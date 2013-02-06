@@ -41,6 +41,11 @@ body {
   margin: 0;
 }
 
+#status ul {
+  padding-left: 10px;
+  list-style-type: none;
+}
+
 
 footer {
   text-align: center;
