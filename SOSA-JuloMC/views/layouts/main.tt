@@ -14,9 +14,24 @@
 
 </head>
 <body>
-<% content %>
 <div id="footer">
 Powered by <a href="http://perldancer.org/">Dancer</a> <% dancer_version %>
 </div>
+</body>
+</html>
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>skBalloon Monitor Center</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="screen, projection" />
+  <link href='http://fonts.googleapis.com/css?family=Black+Ops+One|Bowlby+One+SC|Average+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div id="wrapper">
+    <% content %>
+  </div>
 </body>
 </html>
