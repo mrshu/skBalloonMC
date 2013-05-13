@@ -1,4 +1,0 @@
-skBalloonMC
-===========
-
-skBalloon Monitor Center
