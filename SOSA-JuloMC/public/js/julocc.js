@@ -1,7 +1,23 @@
 
 function JuloCC(options) {
     
-    this.API_URL = 'http://api.aprs.fi/api/get?name=OM3KEG-11&what=loc&apikey=53388.60hsRyf8M9JV4Py&format=json';
+    this.CALLSIGN = 'OM3KEG-11';
+    this.API_KEY = '53388.60hsRyf8M9JV4Py';
+    this.API_URL = 'http://api.aprs.fi/api/get?name='+ this.CALLSIGN + '&what=loc&apikey=' + this.API_KEY + '&format=json';
+    
+    this.baloon = {
+        altitude: 0,
+        speed: 0,
+        battery_voltage: 0,
+        battery_power_used: 0,
+        active_gps: 0,
+    }; 
+
+    this.sensors = {
+        pressure: 0,
+        tempreature: 0,
+        humidity: 0
+    };
     
     this.update = function() {
         console.log('updating');
