@@ -10,6 +10,7 @@ function JuloCC(options) {
         speed: 0,
         battery_voltage: 0,
         battery_power_used: 0,
+        battery_power_actual: 0,
         active_gps: 0,
     }; 
 
@@ -20,7 +21,7 @@ function JuloCC(options) {
     };
     
     this.update = function() {
-        console.log('updating');
+        var $this = this;
         $.getJSON('http://query.yahooapis.com/v1/public/yql',
                 {q:      "select * from json where url='"+this.API_URL+"'",
                  format: 'json'} 
@@ -29,12 +30,28 @@ function JuloCC(options) {
                 if (data.query.results) {
                     data = data.query.results.json;
                     console.log(data);
+                    $this.parsePacket(data.entries.comment);
                 } else {
                     // no data 
                 }
             }
         );
         return; 
+    };
+
+    this.parsePacket = function(packet) {
+        var data = packet.split(',');
+        var type = data[0][4];
+
+        this.baloon.active_gps = parseInt(data[0][2]);;
+
+        if (type == 'P') {
+            this.baloon.battery_voltage = parseInt(data[0].substring(5)) / 1000.0;
+            this.baloon.battery_power_actual = parseInt(data[1]) * 10.0 + 3;
+            this.baloon.battery_power_used = parseInt(data[2]);
+        } else if (type = 'A') {
+
+        }
     };
 
 };
