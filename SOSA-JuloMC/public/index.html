@@ -6,11 +6,11 @@
   <link href="css/style.css" rel="stylesheet" type="text/css" media="screen, projection" />
   <link href='http://fonts.googleapis.com/css?family=Black+Ops+One|Bowlby+One+SC|Average+Sans' rel='stylesheet' type='text/css'>
   <script type="text/javascript" src="/js/jquery.js"></script>
-  <script type="text/javascript" src="/js/julocc.js"></script>
+  <script type="text/javascript" src="/js/julomc.js"></script>
   <script type="text/javascript">
     $(window).load(function(){
-        var julocc = new JuloCC();
-        julocc.update();
+        var julomc = new JuloMC();
+        julomc.update();
     });
   </script>
 </head>
@@ -28,6 +28,7 @@
           <li><strong>Altitude:</strong><span id="data_altitude">&nbsp;</span></li>
           <li><strong>Speed:</strong><span id="data_speed">&nbsp;</span></li>
           <li><strong>Battery voltage:</strong><span id="data_voltage">&nbsp;</span></li>
+          <li><strong>Battery power:</strong><span id="data_power"></span></li>
           <li><strong>Battery power used:</strong><span id="data_power_used">&nbsp;</span></li>
         </ul>
       </div>
