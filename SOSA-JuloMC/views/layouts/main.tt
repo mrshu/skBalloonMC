@@ -9,9 +9,14 @@
   <script type="text/javascript" src="/js/julocc.js"></script>
 
   <script type="text/javascript">
+    id = 0;
     $(window).load(function(){
         var julocc = new JuloCC();
-        julocc.update();
+        setInterval(function(){
+          julocc.API_URL = 'http://0.0.0.0:3000/api/' + id;
+          julocc.update('local');
+          id += 1;
+        }, 1000);
     });
   </script>
 </head>
