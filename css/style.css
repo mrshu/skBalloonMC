@@ -4,6 +4,11 @@ body {
   margin: 3px;
 }
 
+#wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 #leftbar {
   float: left;
   width: 200px;
@@ -47,9 +52,20 @@ body {
 
 .leftbox ul {
   padding-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   list-style-type: none;
 }
 
+.leftbox ul li span{
+  display: block;
+  padding-left: 10px;
+  font-size: small;
+}
+
+.leftbox ul li strong {
+  display: block;
+}
 
 footer {
   text-align: center;

@@ -5,6 +5,14 @@
   <title>skBalloon Monitor Center</title>
   <link href="css/style.css" rel="stylesheet" type="text/css" media="screen, projection" />
   <link href='http://fonts.googleapis.com/css?family=Black+Ops+One|Bowlby+One+SC|Average+Sans' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="/js/jquery.js"></script>
+  <script type="text/javascript" src="/js/julomc.js"></script>
+  <script type="text/javascript">
+    $(window).load(function(){
+        var julomc = new JuloMC();
+        julomc.update();
+    });
+  </script>
 </head>
 <body>
   <div id="wrapper">
@@ -16,24 +24,25 @@
       <div class="leftbox" id="status">
         <h3>Mission status</h3>
         <ul>
-          <li><strong>Time:</strong><span id="data_time"></span></li>
-          <li><strong>Altitude:</strong><span id="data_altitude"></span></li>
-          <li><strong>Speed:</strong><span id="data_speed"></span></li>
-          <li><strong>Battery voltage:</strong><span id="data_voltage"></span></li>
-          <li><strong>Battery power used:</strong><span id="data_power_used"></span></li>
+          <li><strong>Time:</strong><span id="data_time">&nbsp;</span></li>
+          <li><strong>Altitude:</strong><span id="data_altitude">&nbsp;</span></li>
+          <li><strong>Speed:</strong><span id="data_speed">&nbsp;</span></li>
+          <li><strong>Battery voltage:</strong><span id="data_voltage">&nbsp;</span></li>
+          <li><strong>Battery power:</strong><span id="data_power"></span></li>
+          <li><strong>Battery power used:</strong><span id="data_power_used">&nbsp;</span></li>
         </ul>
       </div>
 
       <div class="leftbox" id="sensors">
         <h3>Sensory data</h3>
         <ul>
-          <li><strong>Pressure:</strong><span id="data_pressure"></span></li>
-          <li><strong>Temperature:</strong><span id="data_temperature"></span></li>
-          <li><strong>Humidity:</strong><span id="data_humidity"></span></li>
+          <li><strong>Pressure:</strong><span id="data_pressure">&nbsp;</span></li>
+          <li><strong>Temperature:</strong><span id="data_temperature">&nbsp;</span></li>
+          <li><strong>Humidity:</strong><span id="data_humidity">&nbsp;</span></li>
         </ul>
       </div>
 
-      <small> Last update: <span id="data_last_update"></span> </small>
+      <small> Last update: <span id="data_last_update">&nbsp;</span> </small>
     </section>
 
     <section id="main">
