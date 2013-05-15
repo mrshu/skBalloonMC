@@ -31,12 +31,20 @@ function JuloCC(options) {
                     data = data.query.results.json;
                     console.log(data);
                     $this.parsePacket(data.entries.comment);
+                    $this.baloon.altitude = data.entries.altitude;
+                    $this.baloon.speed = data.entries.speed;
+
+                    console.log($this.baloon);
                 } else {
                     // no data 
                 }
             }
         );
         return; 
+    };
+
+    this.updateView = function() {
+    
     };
 
     this.parsePacket = function(packet) {
@@ -52,6 +60,7 @@ function JuloCC(options) {
         } else if (type = 'A') {
 
         }
+
     };
 
 };
