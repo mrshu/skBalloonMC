@@ -34,7 +34,7 @@ function JuloCC(options) {
                     $this.baloon.altitude = data.entries.altitude;
                     $this.baloon.speed = data.entries.speed;
 
-                    console.log($this.baloon);
+                    $this.updateView();
                 } else {
                     // no data 
                 }
@@ -44,7 +44,10 @@ function JuloCC(options) {
     };
 
     this.updateView = function() {
-    
+        $('#data_altitude').html(this.baloon.altitude + ' m');
+        $('#data_speed').html(this.baloon.speed + ' km/h');
+        $('#data_voltage').html(this.baloon.battery_voltage + ' V');
+        $('#data_power_used').html(this.baloon.battery_power_used+ ' mAh');
     };
 
     this.parsePacket = function(packet) {

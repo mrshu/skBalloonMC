@@ -55,6 +55,15 @@ body {
   list-style-type: none;
 }
 
+.leftbox ul li span{
+  display: block;
+  padding-left: 10px;
+  font-size: small;
+}
+
+.leftbox ul li strong {
+  display: block;
+}
 
 footer {
   text-align: center;
