@@ -1,5 +1,5 @@
 
-function JuloCC(options) {
+function JuloMC(options) {
     
     this.CALLSIGN = 'OM3KEG-11';
     this.API_KEY = '53388.60hsRyf8M9JV4Py';

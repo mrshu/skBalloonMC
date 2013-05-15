@@ -11,10 +11,10 @@
   <script type="text/javascript">
     id = 0;
     $(window).load(function(){
-        var julocc = new JuloCC();
+        var julomc = new JuloMC();
         setInterval(function(){
-          julocc.API_URL = 'http://0.0.0.0:3000/api/' + id;
-          julocc.update('local');
+          julomc.API_URL = 'http://0.0.0.0:3000/api/' + id;
+          julomc.update('local');
           id += 1;
         }, 1000);
     });
