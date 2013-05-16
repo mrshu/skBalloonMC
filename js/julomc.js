@@ -68,7 +68,7 @@ function JuloMC(options) {
         $('#data_power').html(this.baloon.battery_power_actual+ ' mA');
         $('#data_power_used').html(this.baloon.battery_power_used+ ' mAh');
 
-        $('#data_pressure').html(this.sensors.pressure + ' kPa');
+        $('#data_pressure').html(this.sensors.pressure + ' hPa');
         $('#data_temperature').html(this.sensors.tempreature + ' °C');
         $('#data_humidity').html(this.sensors.humidity + ' %Rh');
     };
