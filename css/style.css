@@ -60,11 +60,11 @@ body {
 .leftbox ul li span{
   display: block;
   padding-left: 10px;
-  font-size: small;
 }
 
 .leftbox ul li strong {
   display: block;
+  font-size: small;
 }
 
 footer {
