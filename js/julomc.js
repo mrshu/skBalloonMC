@@ -7,6 +7,7 @@ function JuloMC(options) {
     
     this.baloon = {
         altitude: 0,
+        altitude_computed: 0,
         speed: 0,
         battery_voltage: 0,
         battery_power_used: 0,
@@ -63,6 +64,7 @@ function JuloMC(options) {
 
     this.updateView = function() {
         $('#data_altitude').html(this.baloon.altitude + ' m');
+        $('#data_altitude_computed').html(this.baloon.altitude_computed + ' m');
         $('#data_speed').html(this.baloon.speed + ' km/h');
         $('#data_voltage').html(this.baloon.battery_voltage + ' V');
         $('#data_power').html(this.baloon.battery_power_actual+ ' mA');
@@ -86,8 +88,11 @@ function JuloMC(options) {
         } else if (type == 'A') {
             console.log(data);
             this.sensors.tempreature = Math.round(parseInt(data[0].substring(5)) / 10.0);
-            this.sensors.pressure = Math.round(parseInt(data[1]) / 10.0);
+            var p =parseInt(data[1]) / 10.0;
+            this.sensors.pressure = Math.round(p);
             this.sensors.humidity = Math.round(parseInt(data[2]) / 100.0);
+            $this.baloon.altitude_computed = 43252.0048-2.9910839*p-5870.47115*Math.log(p);
+
         }
     };
 
