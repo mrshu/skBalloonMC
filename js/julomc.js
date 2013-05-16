@@ -33,8 +33,8 @@ function JuloMC(options) {
                         data = data.query.results.json;
                         console.log(data);
                         $this.parsePacket(data.entries.comment);
-                        $this.baloon.altitude = data.entries.altitude;
-                        $this.baloon.speed = data.entries.speed;
+                        $this.baloon.altitude = Math.round(data.entries.altitude);
+                        $this.baloon.speed = Math.round(data.entries.speed);
 
                         $this.updateView();
                     } else {
@@ -80,14 +80,14 @@ function JuloMC(options) {
         this.baloon.active_gps = parseInt(data[0][2]);;
 
         if (type == 'P') {
-            this.baloon.battery_voltage = parseInt(data[0].substring(5)) / 1000.0;
+            this.baloon.battery_voltage = Math.round(parseInt(data[0].substring(5)) / 1000.0);
             this.baloon.battery_power_actual = parseInt(data[1]) * 10.0 + 3;
-            this.baloon.battery_power_used = parseInt(data[2]);
+            this.baloon.battery_power_used = (parseInt(data[2]));
         } else if (type == 'A') {
             console.log(data);
-            this.sensors.tempreature = parseInt(data[0].substring(5)) / 10.0;
-            this.sensors.pressure = parseInt(data[1]) / 100.0;
-            this.sensors.humidity = parseInt(data[2]) / 100.0;
+            this.sensors.tempreature = Math.round(parseInt(data[0].substring(5)) / 10.0);
+            this.sensors.pressure = Math.round(parseInt(data[1]) / 10.0);
+            this.sensors.humidity = Math.round(parseInt(data[2]) / 100.0);
         }
     };
 
