@@ -1,7 +1,7 @@
 
 function JuloMC(options) {
     
-    this.CALLSIGN = 'OM4AOZ-11';
+    this.CALLSIGN = 'OM3KEG-11';
     this.API_KEY = '53388.60hsRyf8M9JV4Py';
     this.API_URL = 'http://api.aprs.fi/api/get?name='+ this.CALLSIGN + '&what=loc&apikey=' + this.API_KEY + '&format=json';
     
