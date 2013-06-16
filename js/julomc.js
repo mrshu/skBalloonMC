@@ -33,6 +33,12 @@ function JuloMC(options) {
                     if (data.query.results) {
                         data = data.query.results.json;
                         console.log(data);
+
+                        if (data.result == "fail") {
+                            alert(data.description);
+                            return;
+                        }
+
                         $this.parsePacket(data.entries.comment);
                         $this.baloon.altitude = Math.round(data.entries.altitude);
                         $this.baloon.speed = Math.round(data.entries.speed);
