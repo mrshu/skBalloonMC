@@ -91,7 +91,7 @@ function JuloMC(options) {
             var p =parseInt(data[1]) / 10.0;
             this.sensors.pressure = Math.round(p);
             this.sensors.humidity = Math.round(parseInt(data[2]) / 100.0);
-            this.baloon.altitude_computed = 43252.0048-2.9910839*p-5870.47115*Math.log(p);
+            this.baloon.altitude_computed = Math.round(43252.0048-2.9910839*p-5870.47115*Math.log(p));
 
         }
     };
