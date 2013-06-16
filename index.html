@@ -10,9 +10,10 @@
   <script type="text/javascript">
     $(window).load(function(){
         var julomc = new JuloMC();
+        julomc.update();
         setInterval(function(){
           julomc.update();
-        }, 2000);
+        }, 10000);
     });
   </script>
 </head>
