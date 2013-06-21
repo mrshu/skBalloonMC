@@ -69,6 +69,10 @@ function JuloMC(options) {
     };
 
     this.updateView = function() {
+        var start = Date.now();
+        var elapsed = start - this.MISSION_START_TIMESTAMP;
+        var diff = new Date(elapsed);
+        $('#data_time').html(diff.getHours() + ':' + diff.getMinutes() + ':' + diff.getSeconds());
         $('#data_altitude').html(this.baloon.altitude + ' m');
         $('#data_altitude_computed').html(this.baloon.altitude_computed + ' m');
         $('#data_speed').html(this.baloon.speed + ' km/h');
