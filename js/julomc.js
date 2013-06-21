@@ -68,11 +68,19 @@ function JuloMC(options) {
         return; 
     };
 
-    this.updateView = function() {
+    this.updateTime = function() {
         var start = Date.now();
         var elapsed = start - this.MISSION_START_TIMESTAMP;
         var diff = new Date(elapsed);
-        $('#data_time').html(diff.getHours() + ':' + diff.getMinutes() + ':' + diff.getSeconds());
+        var sign = '';
+        if (elapsed < 0) sign = '-';
+        $('#data_time').html(sign + ( (diff.getHours()<10?'0':'') + diff.getHours() ) 
+                    + ':' +
+                    ( (diff.getMinutes()<10?'0':'') + diff.getMinutes() ) + ':' +
+                    ( (diff.getSeconds()<10?'0':'') + diff.getSeconds() ) );
+    };
+
+    this.updateView = function() {
         $('#data_altitude').html(this.baloon.altitude + ' m');
         $('#data_altitude_computed').html(this.baloon.altitude_computed + ' m');
         $('#data_speed').html(this.baloon.speed + ' km/h');

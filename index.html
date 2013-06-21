@@ -11,10 +11,14 @@
     $(window).load(function(){
         var julomc = new JuloMC();
         julomc.update();
-        julomc.MISSION_START_TIMESTAMP = new Date(1371844205 * 1000);
+        julomc.MISSION_START_TIMESTAMP = new Date(1371898800 * 1000);
         setInterval(function(){
           julomc.update();
         }, 20000);
+        setInterval(function(){
+          julomc.updateTime();
+        }, 500);
+
     });
   </script>
 </head>
