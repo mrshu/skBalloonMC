@@ -100,7 +100,7 @@ function JuloMC(options) {
         this.baloon.active_gps = parseInt(data[0][2]);;
 
         if (type == 'P') {
-            this.baloon.battery_voltage = Math.round(parseInt(data[0].substring(5)) / 1000.0);
+            this.baloon.battery_voltage = Math.round(parseInt(data[0].substring(5)) / 10.0) / 100.0;
             this.baloon.battery_power_actual = parseInt(data[1]) * 10.0 + 3;
             this.baloon.battery_power_used = (parseInt(data[2]));
         } else if (type == 'A') {
